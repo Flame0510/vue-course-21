@@ -1,6 +1,8 @@
 <script setup lang="ts">
   import { ref } from 'vue';
 
+  import SectionComponent from './SectionComponent.vue';
+
   const names = ref<string[]>(['Mario', 'Gianfranco', 'Luca']);
 
   const addName = (event: Event) => {
@@ -22,10 +24,7 @@
 </script>
 
 <template>
-  <section class="section">
-    <!-- TITLE -->
-    <h1 class="title">TO DO LIST</h1>
-
+  <SectionComponent title="TO DO LIST">
     <div class="names-container">
       <!-- NAME STAMP -->
       <p v-for="(name, index) in names" :key="index">
@@ -35,5 +34,5 @@
       <!-- INPUT -->
       <input @change="addName" />
     </div>
-  </section>
+  </SectionComponent>
 </template>

@@ -1,19 +1,24 @@
 <script setup lang="ts">
   import { ref } from 'vue';
 
-  const names = ref<string[]>(['Mario', 'Gianfranco', 'Luca']); 
+  import SectionComponent from './SectionComponent.vue';
+
+  const names = ref<string[]>(['Mario', 'Gianfranco', 'Luca']);
 </script>
 
 <template>
-  <section class="section">
-    <!-- TITLE -->
-    <h1 class="title">FOR</h1>
-
+  <SectionComponent title="FOR">
     <div class="names-container">
-      <!-- NAME STAMP -->
-      <p v-for="(name, index) in names" :key="index">
+      <!-- NAME STAMP CON CLASSE DINAMICA-->
+      <p v-for="(name, index) in names" :key="index" :class="{ active: index === 1 }">
         {{ name }}
       </p>
     </div>
-  </section>
+  </SectionComponent>
 </template>
+
+<style scoped lang="scss">
+  .active {
+    color: red;
+  }
+</style>

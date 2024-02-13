@@ -1,14 +1,13 @@
 <script setup lang="ts">
   import { ref } from 'vue';
 
+  import SectionComponent from './SectionComponent.vue';
+
   const name = ref<string>('Gianfranco');
 </script>
 
 <template>
-  <section class="section">
-    <!-- TITLE -->
-    <h1 class="title">REF</h1>
-
+  <SectionComponent title="REF">
     <div>
       <!-- NAME STAMP -->
       <p>{{ name }}</p>
@@ -21,5 +20,5 @@
       <p v-else-if="name === 'Mirko'">MIRKO</p>
       <p v-else>Nome: {{ name }}</p>
     </div>
-  </section>
+  </SectionComponent>
 </template>
