@@ -1,7 +1,7 @@
 <script setup lang="ts">
   import { ref } from 'vue';
 
-  const names = ref<string[]>(['Mario', 'Gianfranco', 'Luca']);
+  const names = ref<string[]>(['Mario', 'Gianfranco', 'Luca']); 
 </script>
 
 <template>

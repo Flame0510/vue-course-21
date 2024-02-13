@@ -12,7 +12,7 @@
     <ForComponent />
     <ToDoList />
 
-    <TextComponent class="red" />
+    <TextComponent :class="Math.random() > 0.5 ? 'red' : 'green'" />
     <TextComponent class="green" />
   </div>
 </template>

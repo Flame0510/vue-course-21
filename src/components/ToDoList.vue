@@ -3,10 +3,21 @@
 
   const names = ref<string[]>(['Mario', 'Gianfranco', 'Luca']);
 
-  const addName = (event) => {
-    names.value.push(event.target.value);
+  const addName = (event: Event) => {
+    //DESTRUTTURIAMO 'event' PRENDENDO 'target'
+    const { target } = event;
 
-    event.target.value = '';
+    //CREIAMO UN RIFERIMENTO DI 'target' CHIAMATO 't' FACENDO IL CASTING A 'HTMLInputElement'
+    const t = target as HTMLInputElement;
+
+    //DESTRUTTURIAMO 't' PRENDENDO 'value'
+    const { value } = t;
+
+    //FACCIAMO UN PUSH DEL VALORE DELL'INPUT ('value') ALL'INTERNO DELL'ARRAY 'list'
+    names.value.push(value);
+
+    //INIZIALIZZIAMO IL VALORE DELL'INPUT
+    t.value = '';
   };
 </script>
 
@@ -24,6 +35,5 @@
       <!-- INPUT -->
       <input @change="addName" />
     </div>
-    3
   </section>
 </template>

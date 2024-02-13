@@ -18,6 +18,8 @@
 
       <!-- IF -->
       <p v-if="name === 'Mario'">MARIO</p>
+      <p v-else-if="name === 'Mirko'">MIRKO</p>
+      <p v-else>Nome: {{ name }}</p>
     </div>
   </section>
 </template>
