@@ -9,6 +9,7 @@
   import ButtonComponent from './components/ButtonComponent.vue';
   import SectionComponent from './components/SectionComponent.vue';
   import ToDoListWithRef from './components/ToDoListWithRef.vue';
+  import CardsSection from './components/CardsSection.vue';
 
   const mountToggle = ref<boolean>(false);
 
@@ -58,6 +59,8 @@
         @buttonClick="clickCounter--"
       />
     </SectionComponent>
+
+    <CardsSection />
   </div>
 </template>
 

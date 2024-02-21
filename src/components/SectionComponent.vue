@@ -15,6 +15,8 @@
 </template>
 
 <style scoped lang="scss">
+  @import '../scss/includes.scss';
+
   .section-component {
     padding: 32px 0;
 
@@ -22,6 +24,8 @@
 
     .title {
       color: #fff;
+
+      margin-bottom: rem(16);
     }
   }
 </style>
