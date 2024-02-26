@@ -50,7 +50,7 @@
   @import '../scss/includes.scss';
 
   .cards-container {
-    @include flex(null, null);
+    @include flex();
 
     gap: rem(16);
   }

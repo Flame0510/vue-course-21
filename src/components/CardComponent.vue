@@ -31,7 +31,7 @@
     color: #000;
     background: #ddd;
 
-    padding: rem(8);
+    padding: rem(16);
 
     border-radius: rem(8);
 
@@ -54,9 +54,11 @@
       color: #fff;
       background: #000;
 
-      padding: rem(4) rem(8);
+      padding: rem(16) rem(8);
 
       border-radius: rem(4);
+
+      text-align: center;
 
       transition: $transition;
 
