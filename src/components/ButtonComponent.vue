@@ -12,8 +12,12 @@
 </template>
 
 <style scoped lang="scss">
+  @import '../scss/includes.scss';
+
   .button {
     border: none;
+
+    padding: rem(8);
 
     &.primary {
       color: #fff;

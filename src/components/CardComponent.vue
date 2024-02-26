@@ -1,4 +1,6 @@
 <script setup lang="ts">
+  import { onMounted } from 'vue';
+
   defineProps({
     img: String,
     title: String,
@@ -6,6 +8,8 @@
     cta: String,
     url: String
   });
+
+  onMounted(() => console.log('Sono una card!'));
 </script>
 
 <template>
