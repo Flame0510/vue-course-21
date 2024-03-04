@@ -10,6 +10,9 @@
   import SectionComponent from './components/SectionComponent.vue';
   import ToDoListWithRef from './components/ToDoListWithRef.vue';
   import CardsSection from './components/CardsSection.vue';
+  import WatcherComponent from './components/WatcherComponent.vue';
+  import WatchEffectComponent from './components/WatchEffectComponent.vue';
+  import FetchComponent from './components/FetchComponent.vue';
 
   const mountToggle = ref<boolean>(false);
 
@@ -61,6 +64,13 @@
     </SectionComponent>
 
     <CardsSection />
+
+    <WatcherComponent />
+    <WatchEffectComponent />
+
+    <Suspense>
+      <FetchComponent />
+    </Suspense>
   </div>
 </template>
 
