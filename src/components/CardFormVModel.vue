@@ -13,10 +13,15 @@
     url: ''
   });
 
+  //UTILIZZO DI keyof
+  type CardTypeKeys = keyof CardType;
+  //CREA UN TYPO CHE CONTIENE TUTTE LE CHIAVI DELL'OGGETTO
+  //type CardTypeKeys = 'img' | 'title' | 'description' | 'cta' | 'url';
+
   const handleSubmit = () => {
     emit('addCard', values);
 
-    Object.keys(values).forEach((inputName: string) => (values[inputName] = ''));
+    Object.keys(values).forEach((inputName: string) => (values[inputName as CardTypeKeys] = ''));
   };
 </script>
 

@@ -13,7 +13,12 @@
     url: ''
   });
 
-  type CardTypeEnum = keyof CardType;
+  
+
+  //UTILIZZO DI keyof
+  type CardTypeKeys = keyof CardType;
+  //CREA UN TYPO CHE CONTIENE TUTTE LE CHIAVI DELL'OGGETTO
+  //type CardTypeKeys = 'img' | 'title' | 'description' | 'cta' | 'url';
 
   const handleSubmit = (event: Event) => {
     console.log(values.img);
@@ -24,7 +29,7 @@
     //CON CUI ANDIAMO A PRENDERE IL VALORE DELL'INPUT CORRISPONDENTE ALLA CHIAVE
     //CHE VIENE SUCCESSIVAMENTE DEFINITO COME VALORE DELLA CHIAVE DI "values" CORRISPONDENTE
     Object.keys(values).forEach(
-      (inputName: string) => (values[inputName] = elements.find(({ name }) => inputName === name)?.value || '')
+      (inputName: string) => (values[inputName as CardTypeKeys] = elements.find(({ name }) => inputName === name)?.value || '')
     );
 
     //EMETTIAMO UN EVENTO "addCard" AL PADRE IN CUI PASSIAMO "values"
@@ -37,7 +42,7 @@
     values.url = ''; */
 
     //INIZIALIZZA TUTTI I VALORI DI "values" ED E' IL CORRISPETTIVO DEL CODICE PRECEDENTE
-    Object.keys(values).forEach((inputName: string) => (values[inputName] = ''));
+    Object.keys(values).forEach((inputName: string) => (values[inputName as CardTypeKeys] = ''));
   };
 </script>
 
