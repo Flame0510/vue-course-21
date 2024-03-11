@@ -15,7 +15,7 @@
 </template>
 
 <style scoped lang="scss">
-  @import '../scss/includes.scss';
+  @import '@/scss/includes.scss';
 
   .section-component {
     padding: 32px 0;

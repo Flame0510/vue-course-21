@@ -40,7 +40,7 @@
 </template>
 
 <style scoped lang="scss">
-  @import '../scss/includes.scss';
+  @import '@/scss/includes.scss';
 
   .form-container {
     @include flex($flex-direction: column);

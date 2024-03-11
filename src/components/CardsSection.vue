@@ -59,7 +59,7 @@
 </template>
 
 <style scoped lang="scss">
-  @import '../scss/includes.scss';
+  @import '@/scss/includes.scss';
 
   .cards-container {
     @include flex($flex-wrap: wrap);

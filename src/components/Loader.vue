@@ -1,17 +1,28 @@
 <script setup lang="ts">
+  import { watch } from 'vue';
   import { loader } from '../../store';
 
-  setTimeout(() => loader.setLoading(false), 1000);
+  import router from '@/router';
+
+  watch(
+    router.currentRoute,
+    () => {
+      loader.setLoading(true);
+
+      setTimeout(() => loader.setLoading(false), 1000);
+    },
+    { immediate: true }
+  );
 </script>
 
 <template>
-  <div class="loader-container" :class="{ show: loader.loading }">
+  <div class="loader-container" :class="{ hide: !loader.loading }">
     <p class="loader-message">Loading...</p>
   </div>
 </template>
 
 <style scoped lang="scss">
-  @import '../scss/includes.scss';
+  @import '@/scss/includes.scss';
 
   .loader-container {
     @include flex(center, center);
@@ -28,10 +39,12 @@
 
     transition: $transition;
 
-    opacity: 0;
+    opacity: 1;
+    visibility: visible;
 
-    &.show {
-      opacity: 1;
+    &.hide {
+      opacity: 0;
+      visibility: hidden;
     }
 
     .loader-message {

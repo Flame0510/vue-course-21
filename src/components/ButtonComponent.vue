@@ -12,7 +12,7 @@
 </template>
 
 <style scoped lang="scss">
-  @import '../scss/includes.scss';
+  @import '@/scss/includes.scss';
 
   .button {
     border: none;

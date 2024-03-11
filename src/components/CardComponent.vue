@@ -24,7 +24,7 @@
 </template>
 
 <style scoped lang="scss">
-  @import '../scss/includes.scss';
+  @import '@/scss/includes.scss';
   .card-component {
     @include flex(space-between, $flex-direction: column);
 
