@@ -1,5 +1,6 @@
 <script setup lang="ts">
   import { ref } from 'vue';
+  import Loader from './components/Loader.vue';
   import RefValue from './components/RefValue.vue';
   import ForComponent from './components/ForComponent.vue';
   import ToDoList from './components/ToDoList.vue';
@@ -21,6 +22,8 @@
 
 <template>
   <div class="container">
+    <Loader />
+
     <!-- REF -->
     <RefValue />
 
@@ -68,9 +71,7 @@
     <WatcherComponent />
     <WatchEffectComponent />
 
-    <Suspense>
-      <FetchComponent />
-    </Suspense>
+    <FetchComponent />
   </div>
 </template>
 

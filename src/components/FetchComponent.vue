@@ -1,4 +1,5 @@
 <script setup lang="ts">
+  //import { useFetch } from '@vueuse/core';
   import SectionComponent from './SectionComponent.vue';
 
   import useFetch from '../utils/fetch';
@@ -13,6 +14,9 @@
 
   //UTLIZZO DELLA UTIL "useFetch" CHE ABBIAMO CREATO IN PRECEDENZA
   const { data, error } = useFetch('https://jsonplaceholder.typicode.com/todos');
+
+  //UTILIZZO DI "useFetch" PRESO DALLA LIBRERIA "VueUse" (IL VALUE E' UN PARSED ARRAY [STRING])
+  //const { isFetching, error, data } = await useFetch('https://jsonplaceholder.typicode.com/todos');
 </script>
 
 <template>
